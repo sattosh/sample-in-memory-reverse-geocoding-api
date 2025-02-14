@@ -1,0 +1,17 @@
+[package]
+name = "sandbox-in-memory-geo-api"
+version = "0.1.0"
+edition = "2021"
+
+
+[target.aarch64-apple-darwin]
+rustflags = ["-C", "link-arg=-fuse-ld=mold"]
+
+[dependencies]
+actix-web = "4.9.0"
+clap = { version = "4.5.29", features = ["derive"] }
+geo = "0.29.3"
+rstar = "0.12.2"
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.138"
+shapefile = "0.6.0"
